@@ -1,0 +1,11 @@
+# ALTB
+.alpackages/
+.alcache/
+.snapshots/
+
+launch.json
+!app.json
+rad.json
+
+*.app
+*.g.xlf
