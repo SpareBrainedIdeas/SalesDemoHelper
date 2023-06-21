@@ -140,9 +140,9 @@ page 75020 "SDH Item Generate"
     {
         area(Processing)
         {
-            action(LaunchHelper)
+            action(RunHelper)
             {
-                Caption = 'Launch Helper';
+                Caption = 'Run Helper';
                 ApplicationArea = All;
                 Image = NextRecord;
                 Promoted = true;
@@ -152,13 +152,13 @@ page 75020 "SDH Item Generate"
 
                 trigger OnAction()
                 begin
-                    LaunchCustDataHelper();
+                    RunCustDataHelper();
                 end;
             }
         }
     }
 
-    procedure LaunchCustDataHelper()
+    procedure RunCustDataHelper()
     var
         SDHItemGenCore: Codeunit "SDH Item Gen. Core";
     begin

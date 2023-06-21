@@ -56,9 +56,9 @@ page 75010 "SDH Cust. Data Gen."
     {
         area(Processing)
         {
-            action(LaunchHelper)
+            action(RunHelper)
             {
-                Caption = 'Launch Helper';
+                Caption = 'Run Helper';
                 ApplicationArea = All;
                 Image = NextRecord;
                 Promoted = true;
@@ -68,7 +68,7 @@ page 75010 "SDH Cust. Data Gen."
 
                 trigger OnAction()
                 begin
-                    LaunchCustDataHelper();
+                    RunCustDataHelper();
                 end;
             }
         }
@@ -79,7 +79,7 @@ page 75010 "SDH Cust. Data Gen."
         Rec.GetRecordOnce();
     end;
 
-    procedure LaunchCustDataHelper()
+    procedure RunCustDataHelper()
     var
         Customer: Record Customer;
         Item: Record Item;
